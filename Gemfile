@@ -71,3 +71,4 @@ end
 gem 'devise'
 
 gem 'importmap-rails'
+gem "noticed", "~> 1.5"
