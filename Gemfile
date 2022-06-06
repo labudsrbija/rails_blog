@@ -72,3 +72,7 @@ gem 'devise'
 
 gem 'importmap-rails'
 gem "noticed", "~> 1.5"
+
+gem "ransack", "~> 3.2"
+
+gem "friendly_id", "~> 5.4"

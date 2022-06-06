@@ -1,0 +1,16 @@
+body {
+background-color: #212121;
+color: #ffd21d;
+}
+
+.navbar-custom {
+    background-color: #121212 !important;
+}
+
+.yellow-text {
+    color: #ffd21d !important;
+}
+
+.test-bg {
+    background-color: #2a2a2a;
+}
