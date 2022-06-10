@@ -2,12 +2,9 @@
 <div class="container">
 <h1>Posts</h1>
 
-<div id="posts">
+<div id="posts" class="posts-3-in-row ">
   <% @posts.each do |post| %>
     <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
   <% end %>
 </div>
 

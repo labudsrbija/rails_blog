@@ -1,5 +1,5 @@
-<div class="container">
-<div id="<%= dom_id post %>" class="test-bg">
+<div class="container test-bg" style="width: 49%;">
+<div id="<%= dom_id post %>" >
   <p>
     <strong>Title:</strong>
     <h2><%= post.title %></h1>
@@ -9,9 +9,13 @@
 
   <div>
   <p>
-    <%= post.body %>
+    <%= raw post.body.to_plain_text %>
   </p>
   </div>
+
+  <p>
+  <%= link_to "Show this post", post %>
+  </p>
 
 </div>
 </div>

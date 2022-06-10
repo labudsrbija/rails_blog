@@ -1,6 +1,7 @@
 # Pin npm packages by running ./bin/importmap
 
 pin "application", preload: true
+pin "test", preload: true
 pin "trix"
 pin "@rails/actiontext", to: "actiontext.js"
 pin "@hotwired/stimulus", to: "stimulus.min.js", preload: true

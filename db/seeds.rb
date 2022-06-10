@@ -17,14 +17,24 @@ User.create(email: 'test@test.com',
     password_confirmation: 'password',
     name: 'Testera')
 
-    10.times do |x|
-        post = Post.create(title: "Title #{x}",
-                           body: "Body #{x} Words go here idk",
-                           user_id: User.first.id)
-
-        5.times do |y|
-            Comment.create(body: "Comment #{y}",
-                           user_id: User.second.id,
-                           post_id: post.id)
+    elapsed = Benchmark.measure do
+        posts = []
+        dean = User.first
+        john = User.second
+        1000.times do |x|
+          puts "Creating post #{x}"
+          post = Post.new(title: "Title #{x}",
+                          body: "Body #{x} Words go here Idk",
+                          user: dean)
+      
+          10.times do |y|
+            puts "Creating comment #{y} for post #{x}"
+            post.comments.build(body: "Comment #{y}",
+                                user: john)
+          end
+          posts.push(post)
         end
-    end                           
+        Post.import(posts, recursive: true)
+      end
+      
+      puts "Elapsed time is #{elapsed.real} seconds"

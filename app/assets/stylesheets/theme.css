@@ -14,3 +14,16 @@ color: #ffd21d;
 .test-bg {
     background-color: #2a2a2a;
 }
+
+.posts-3-in-row {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.yellow-bg {
+    background-color: #ffd21d;  
+}
+
+
+
